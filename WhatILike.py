@@ -1,0 +1,8 @@
+print("I like playing Hearthstone")
+print("I like playing Volleyball")
+print("I like playing Badminton")
+print("I like pizza")
+print("I have a brother")
+print("I have a sister")
+print("I like listening to music")
+print("I like playing mobile games")
