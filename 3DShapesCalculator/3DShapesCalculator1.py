@@ -2,6 +2,37 @@ import tkinter as tk
 from tkinter import ttk
 #WORKING START HOME PAGE GUI
 # intializing the window
+def calcVolumeCone(radius, height):
+
+	if radius >= 0 and height >= 0:
+		volume = math.pi*pow(radius,2)*(height/3)
+		volume = round(volume,2)
+		return volume	
+	else:
+		return -1
+
+
+
+def calcVolumeCylinder(radius, height):
+
+	if radius >= 0 and height >= 0:
+		volume = math.pi*pow(radius,2)*height 
+		volume = round(volume,2)
+		return volume	
+	else:
+		return -1
+
+
+
+def calcVolumeCube(edge):
+
+	if edge >= 0:
+		volume = pow(edge,2)
+		volume = round(volume,2)
+		return volume
+	else:
+		return -1
+
 root = tk.Tk()
 root.title("3DShapesCalculator")
 # configuring size of the window 
