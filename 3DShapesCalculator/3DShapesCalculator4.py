@@ -11,11 +11,11 @@ def on_closing():
 def calcVolumeCone(*args):
 
 	if int(cone1.get()) >= 0 and int(cone2.get()) >= 0:
-		volume = math.pi*pow(int(cone1.get()),2)*(int(cylinder2.get())/3)
+		volume = math.pi*pow(int(cone1.get()),2)*(int(cone2.get())/3)
 		volume = round(volume,2)
 		messagebox.showinfo("Answer",str(volume))
 	else:
-		return -1
+		messagebox.showinfo("Please Enter Positive Numbers")
 def calcVolumeCylinder(*args):
 
 	if int(cylinder1.get()) >= 0 and int(cylinder2.get()) >= 0:
@@ -23,7 +23,7 @@ def calcVolumeCylinder(*args):
 		volume = round(volume,2)
 		messagebox.showinfo("Answer",str(volume))
 	else:
-		return -1
+		messagebox.showinfo("Please Enter Positive Numbers")
 
 def calcVolumeCube(*args):
 
@@ -33,7 +33,7 @@ def calcVolumeCube(*args):
 		messagebox.showinfo("Answer",str(volume))
 	
 	else:
-		return -1
+		messagebox.showinfo("Please Enter Positive Numbers")
 
 
 
@@ -55,8 +55,6 @@ title.place(rely=0.15,relx=0.3)
 subtitle = ttk.Label(home, text="Click above to begin!",font=("Click above to begin!",24))
 subtitle.pack()
 subtitle.place(rely=0.29,relx=0.33)
-
-
 #Cone Button
 conebutton = tk.Button(home)
 conebutton.config(text = "Cone Volume Calculator", width = 10, height = 10)
