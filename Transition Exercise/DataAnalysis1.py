@@ -17,3 +17,38 @@ for i in range(0,len(dataList),1): #loops through every element
 	dataList[i] = float(dataList[i]) #cast element to float
 
 print(dataList)
+
+minimum = min(dataList)
+print(minimum)
+
+maximum = max(dataList)
+print(maximum)
+
+biggest = 0
+for i in range(0,len(dataList),1):
+	if biggest < dataList[i]:
+		biggest = dataList[i]
+
+print("MAX IS: "+str(biggest))
+
+smallest = biggest
+for i in range(0,len(dataList),1):
+	if smallest > dataList[i]:
+		smallest = dataList[i]
+
+print("MIN IS: "+str(smallest))
+
+value = input("What number do you want to set as upper limit ")
+value = float(value)
+#write code that uses data analysis
+count = 0
+for i in range(0, len(dataList),1):
+	if(dataList[i] < value):
+		count = count+1
+		print(dataList[i])
+
+print(count)
+
+
+
+
